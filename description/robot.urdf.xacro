@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
+    <!-- CHASSIS AND WHEELS -->
     <xacro:include filename="robot_core.xacro" />
+
+    <!-- TELEOP SIMULATION -->
+    <xacro:include filename="gazebo_control.xacro" />
 
 </robot>

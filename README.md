@@ -1,7 +1,23 @@
-## Robot Package Template
+# to launch on Ignition gazebo - fortress
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+ - to launch a world
+ ```bash
+    ign gazebo /home/dev/test_ws/src/IGVC_test/worlds/basic.sdf
+```
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
+ - to load in robot.urdf
+ ```bash
+ ign service -s /world/basic/create --reqtype ignition.msgs.EntityFactory --reptype ignition.msgs.Boolean --timeout 1000 --req 'sdf_filename: "/home/dev/test_ws/src/IGVC_test/description/robot.urdf", name: "sarah"'
+```
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+ - to send basic movements
+ ```bash
+ ign topic -t "/cmd_vel" -m ignition.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.0}" 
+ ```
+
+ - to send keyboard input
+    - start Key Publisher ign-gui in gazebo
+```bash
+ign topic -e -t /keyboard/keypress
+```
+
