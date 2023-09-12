@@ -18,7 +18,7 @@
         <origin xyz="-0.1 0 0" />
     </joint>
 
-    <link name="chassis_link">
+    <link name="chassis_link"> 
         <visual>
             <origin xyz="0.15 0 0.075" />
             <geometry>
@@ -118,7 +118,5 @@
         <mu1 value="0.001"/>
         <mu2 value="0.001"/>
     </gazebo>
-
-
 
 </robot>

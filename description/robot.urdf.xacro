@@ -4,7 +4,10 @@
     <!-- CHASSIS AND WHEELS -->
     <xacro:include filename="robot_core.xacro" />
 
-    <!-- TELEOP SIMULATION -->
+    <!-- LiDAR-->
+    <xacro:include filename="lidar.xacro" />
+
+    <!-- DIFF_DRIVE SIMULATION -->
     <xacro:include filename="gazebo_control.xacro" />
 
 </robot>
