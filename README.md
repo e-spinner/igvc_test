@@ -1,8 +1,8 @@
-# to launch on Ignition gazebo - fortress
+# to launch on Gazebo-classic v11
 
  - to launch a world
  ```bash
-ros2 launch IGVC_test launch_sim.launch.py world:=./src/IGVC_test/worlds/obstacles.world
+ros2 launch igvc_test launch_sim.launch.py world:=./src/igvc_test/worlds/obstacles.world
 
 ```
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(IGVC_test)
+project(igvc_test)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)

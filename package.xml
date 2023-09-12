@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>IGVC_test</name>
+  <name>igvc_test</name>
   <version>0.0.0</version>
   <description>Test robot for onu IGVC 23-24</description>
   <maintainer email="e-spinner@onu.edu">Elijah Spinner</maintainer>
