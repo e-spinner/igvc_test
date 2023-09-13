@@ -22,7 +22,8 @@ Run the following command in terminal to check if you have sudo privileges.
 sudo -l 
 ```
 
-If that outputs anything other than: 
+If that outputs anything other than:   
+
 ```bash
 User {username} may run the following commands on Ubuntu: 
 
@@ -41,12 +42,14 @@ This will allow you to edit the file in the terminal, Now you can add
 ```
 
 under
+
 ```bash
-#User privilege specification 
+# User privilege specification 
  
 root     ALL=(ALL:ALL) ALL 
- ```
-TO save your changes in this editor hit ctrl+o, enter, and then ctrl+x.
+```
+
+To save your changes in this editor hit ctrl+o, enter, and then ctrl+x.
 
 After this restart your machine, once you do follow the steps in this [documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) to install ROS, make sure to install the Desktop version and the optional development tools. The base version is not helpful. 
 
