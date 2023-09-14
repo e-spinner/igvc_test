@@ -10,7 +10,8 @@
     <!-- CAMERA -->
     <xacro:include filename="camera.xacro" />
 
-    <!-- DIFF_DRIVE SIMULATION -->
-    <xacro:include filename="gazebo_control.xacro" />
+    <!-- CONTROL -->
+    <!-- <xacro:include filename="gazebo_control.xacro" /> -->
+    <xacro:include filename="ros2_control.xacro" />
 
 </robot>

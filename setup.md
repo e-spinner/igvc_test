@@ -76,8 +76,8 @@ sudo apt install ros-humble-gazebo-ros-pkgs
 ```
 Also install more needed programs with the following command: 
 ```bash
-sudo apt install ros-humble-xacro ros-humble-joint-state-publisher-gui 
-sudo apt install ros-humble-image-transport-plugins 
+sudo apt install ros-humble-xacro ros-humble-joint-state-publisher-gui ros-humble-image-transport-plugins ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control
+
 ```
 finally, run the following to verify that you are upto date, and restart your machine.
 ```bash
