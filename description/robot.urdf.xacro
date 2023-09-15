@@ -2,12 +2,18 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
     <xacro:arg name="use_ros2_control" default="true" />
+    <xacro:arg name="gpu" default="false"/>
+    <xacro:property name="gpu" value="$(arg gpu)" />
 
     <!-- CHASSIS AND WHEELS -->
     <xacro:include filename="robot_core.xacro" />
     
     <!-- LiDAR-->
-    <xacro:include filename="lidar.xacro" />
+    <!-- <xacro:include filename="lidar.xacro" /> -->
+    <xacro:include filename="VLP-16.xacro"/>
+    <xacro:VLP-16 parent="chassis_link" name="velodyne" topic="/velodyne_points" hz="10" samples="440" gpu="${gpu}">
+      <origin xyz="0.1 0 0.15" rpy="0 0 0" />
+    </xacro:VLP-16>
 
     <!-- CAMERA -->
     <xacro:include filename="camera.xacro" />
@@ -21,6 +27,5 @@
     <xacro:unless value="$(arg use_ros2_control)" >
         <xacro:include filename="gazebo_control.xacro" />
     </xacro:unless>
-
 
 </robot>
