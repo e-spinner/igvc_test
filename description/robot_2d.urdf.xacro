@@ -9,10 +9,11 @@
     <xacro:include filename="robot_core.xacro" />
     
     <!-- LiDAR-->
-    <xacro:include filename="VLP-16.xacro"/>
+    <xacro:include filename="lidar.xacro" />
+    <!-- <xacro:include filename="VLP-16.xacro"/>
     <xacro:VLP-16 parent="chassis_link" name="velodyne" topic="/velodyne_points" hz="10" samples="440" gpu="${gpu}">
       <origin xyz="0.1 0 0.15" rpy="0 0 0" />
-    </xacro:VLP-16>
+    </xacro:VLP-16> -->
 
     <!-- CAMERA -->
     <xacro:include filename="camera.xacro" />

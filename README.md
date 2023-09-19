@@ -1,9 +1,12 @@
-# to launch on Gazebo-classic v11
-
- - to launch a world
+# to launch 2D LiDAR sim
  ```bash
-ros2 launch igvc_test launch_sim.launch.py world:=./src/igvc_test/worlds/obstacles.world
+ros2 launch igvc_test launch_test_test_sim.launch.py world:=./src/igvc_test/worlds/maze.world
 
+```
+ 
+ - to launch nav2
+ ```bash
+ros2 launch igvc_test navigation.launch.py use_sim_time:=true
 ```
 
  - to send keyboard input
@@ -11,21 +14,9 @@ ros2 launch igvc_test launch_sim.launch.py world:=./src/igvc_test/worlds/obstacl
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cmd_vel_joy
 ```
 
- - to start RViz2
- ```bash
-ros2 run rviz2 rviz2 -d src/igvc_test/config/main.rviz --ros-args -p use_sim_time:=true
- ```
 
- - to start SLAM
- ```bash
-ros2 launch slam_toolbox online_async_launch.py params_file:=/src/test_igvc/config/mapper_params_online_async.yaml use_sim_time:=true
+ # to launch 3D LiDAR sim
 
- ```
-
- - to launch nav2
- ```bash
-ros2 launch igvc_test navigation_launch.py use_sim_time:=true
-```
 
 - to start ball tracker
 ```bash

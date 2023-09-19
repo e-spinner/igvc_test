@@ -21,7 +21,7 @@ def generate_launch_description():
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
-                )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
+                )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true', 'use_2d': 'true'}.items()
     )
 
     # Strart twist_mux which allows for us to have multiple inouts and map them correctly
@@ -69,6 +69,20 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
 
+    # Launch Navigaiton 2 to begin the waypoint targeting
+    nav2 = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory(package_name),'launch','navigation.launch.py')]),
+            launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+    rviz2_config_file = os.path.join(get_package_share_directory(package_name), 'config', 'nav.rviz')
+
+    rviz2 = Node(
+        package='rviz2', 
+        executable='rviz2',
+        arguments=['-d', rviz2_config_file, {'use_sim_time': True}],
+    )
 
 
 
@@ -80,5 +94,6 @@ def generate_launch_description():
         spawn_entity,
         diff_drive_spawner,
         joint_broad_spawner,
-        # slam
+        slam,
+        rviz2
     ])
