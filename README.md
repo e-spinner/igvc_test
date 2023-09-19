@@ -25,4 +25,10 @@ ros2 launch slam_toolbox online_async_launch.py params_file:=/src/test_igvc/conf
  - to launch nav2
  ```bash
 ros2 launch igvc_test navigation_launch.py use_sim_time:=true
+```
+
+- to start ball tracker
+```bash
+ros2 launch igvc_test ball_tracker.launch.py sim_monde:=true
+```
 

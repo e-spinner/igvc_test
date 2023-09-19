@@ -118,5 +118,5 @@ This is the end. once again feel free to add any advice you discover along the w
 # Additional dependencies
 
 ```bash
-sudo apt install ros-humble-image-transport-plugins ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-turtlebot3-gazebo ros-humble-twist-mux ros-humble-velodyne-simulator
+sudo apt install ros-humble-image-transport-plugins ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-turtlebot3-gazebo ros-humble-twist-mux ros-humble-velodyne-simulator python3-opencv
 ```
